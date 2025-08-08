@@ -15,6 +15,7 @@
 
     <div id="dataDisplay"></div>
 
+    <h2>Post</h2>
     <form id="postForm">
         <label for="title">Post Title:</label>
         <input type="text" id="title" placeholder="Title" required>
@@ -22,6 +23,24 @@
         <textarea name="body" id="body" rows="3" placeholder="Body"></textarea>
         <button type="submit" id="createPost">Create Post</button>
     </form>
+
+     <h2>Update Post</h2>
+    <form id="putForm">
+        <label for="id">Post ID to Update:</label>
+        <input type="number" id="putId" placeholder="Post ID" required />
+        <label for="title">Update Post Title:</label>
+        <input type="text" id="putTitle" placeholder="New Title" required />
+        <label for="body">Update Post Body:</label>
+        <textarea name="putBody" id="putBody" rows="3" placeholder="New Body" required></textarea>
+        <button type="submit">Update Post</button>
+    </form>
+
+    <!-- <h2>Delete Post</h2>
+    <form id="deleteForm">
+        <label for="id">Post ID to Delete:</label>
+        <input type="number" id="deleteId" placeholder="Post ID to Delete" required />
+        <button type="submit">Delete Post</button>
+    </form> -->
 
 </body>
 </html>
