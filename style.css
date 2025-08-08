@@ -2,3 +2,15 @@
 #dataDisplay {
     background-color: aqua;
 }
+
+#postDisplay {
+    background-color: blue;
+}
+
+#putDisplay {
+    background-color: blueviolet;
+}
+
+#deleteDisplay {
+    background-color: bisque;
+}
