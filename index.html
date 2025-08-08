@@ -15,32 +15,35 @@
 
     <div id="dataDisplay"></div>
 
-    <h2>Post</h2>
+    <h2>Create New Post</h2>
     <form id="postForm">
         <label for="title">Post Title:</label>
-        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="title" placeholder="Title" required><br><br>
         <label for="body">Post Body:</label>
-        <textarea name="body" id="body" rows="3" placeholder="Body"></textarea>
+        <textarea name="body" id="body" rows="3" placeholder="Body"></textarea><br><br>
         <button type="submit" id="createPost">Create Post</button>
     </form>
+    <div id="postDisplay"></div>
 
      <h2>Update Post</h2>
     <form id="putForm">
         <label for="id">Post ID to Update:</label>
-        <input type="number" id="putId" placeholder="Post ID" required />
+        <input type="number" id="putId" placeholder="Post ID" required /><br><br>
         <label for="title">Update Post Title:</label>
-        <input type="text" id="putTitle" placeholder="New Title" required />
+        <input type="text" id="putTitle" placeholder="New Title" required /><br><br>
         <label for="body">Update Post Body:</label>
-        <textarea name="putBody" id="putBody" rows="3" placeholder="New Body" required></textarea>
+        <textarea name="putBody" id="putBody" rows="3" placeholder="New Body" required></textarea><br><br>
         <button type="submit">Update Post</button>
     </form>
+    <div id="putDisplay"></div>
 
-    <!-- <h2>Delete Post</h2>
+    <h2>Delete Post</h2>
     <form id="deleteForm">
         <label for="id">Post ID to Delete:</label>
-        <input type="number" id="deleteId" placeholder="Post ID to Delete" required />
+        <input type="number" id="deleteId" placeholder="Post ID to Delete" required /><br><br>
         <button type="submit">Delete Post</button>
-    </form> -->
+    </form>
+    <div id="deleteDisplay"></div>
 
 </body>
 </html>
