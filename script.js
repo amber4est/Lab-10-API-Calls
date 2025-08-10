@@ -115,7 +115,7 @@ deleteForm.addEventListener("submit", function(event) {
     })
     .then((response) => {
         if (response.ok) {
-            deleteData.textContent = `Post ID ${id} has been deleted.`;
+            deleteData.textContent = `Post ID ${id} has been deleted!`;
         } else {
             throw new Error(`Failed to delete post. Status: ${response.status}`);
         }

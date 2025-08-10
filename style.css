@@ -1,16 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background-color: white;
+}
+
+header, footer {
+    background-color: midnightblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    box-shadow: 4px 4px 4px black;
+}
+
+#topButtons {
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+}
+
+#fetchButton, #xhrButton {
+    background-color: lightblue;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 1px 2px 2px black;
+    width: 30%;
+    margin: 20px;
+}
+
+#fetchButton:hover, #xhrButton:hover {
+    background-color: white;
+    box-shadow: 3px 4px 4px black;
+    border: 2px solid black;
+}
 
 #dataDisplay {
-    background-color: aqua;
+    background-color: lightcyan;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 2px solid black;
 }
 
 #postDisplay {
-    background-color: blue;
+    background-color: lightcyan;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 2px solid black;
 }
 
 #putDisplay {
-    background-color: blueviolet;
+    background-color: lightcyan;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 2px solid black;
 }
 
 #deleteDisplay {
-    background-color: bisque;
+    background-color: lightcyan;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+#postForm, #putForm, #deleteForm {
+    background-color: azure;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+#createPost, #updatePost, #deletePost {
+    background-color: lightblue;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 1px 2px 2px black;
+    width: 20%;
+    margin: 20px;
+}
+
+#createPost:hover, #updatePost:hover, #deletePost:hover {
+    background-color: white;
+    box-shadow: 3px 4px 4px black;
+    border: 2px solid black;
+}
+
+label {
+    padding: 10px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
 }
