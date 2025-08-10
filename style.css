@@ -123,3 +123,83 @@ input, textarea {
     background-color: red;
     color: white;
 }
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 10px;
+    }
+
+    #dataDisplay, #postDisplay, #putDisplay, #fetchButton, #xhrButton, #fetchAllButton, #postForm, #putForm, #deleteForm, #createPost, #updatePost, #deletePost, input, textarea{
+    width: 90%;
+    }
+
+    #topButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 5px;
+        padding: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 12px;
+    }
+
+    #dataDisplay, #postDisplay, #putDisplay, #fetchButton, #xhrButton, #fetchAllButton, #postForm, #putForm, #deleteForm, #createPost, #updatePost, #deletePost, input, textarea{
+    width: 90%;
+    }
+
+    #topButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 5px;
+        padding: 3px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1{
+        font-size: 15px;
+    }
+
+    #dataDisplay, #postDisplay, #putDisplay, #fetchButton, #xhrButton, #fetchAllButton, #postForm, #putForm, #deleteForm, #createPost, #updatePost, #deletePost, input, textarea{
+    width: 90%;
+    }
+
+    #topButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 6px;
+        padding: 3px;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1{
+        font-size: 20px;
+    }
+
+    #dataDisplay, #postDisplay, #putDisplay, #fetchButton, #xhrButton, #fetchAllButton, #postForm, #putForm, #deleteForm, #createPost, #updatePost, #deletePost, input, textarea{
+    width: 90%;
+    }
+
+    #topButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 15px;
+        padding: 7px;
+    }
+}
