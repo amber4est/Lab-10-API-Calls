@@ -102,7 +102,6 @@ putForm.addEventListener("submit", (event) => {
             }
             else {
                 putData.innerText = `Error ${xhr.status}: Unable to update post. Please try an ID between 1 and 100.`;
-                //putData.innerText = "Error updating post.";
             }
         }
     };
@@ -146,15 +145,15 @@ function putDisplay(post) {
     putData.innerText = `Post has been updated!\n\nUser ID:\n${post.userId}\n\nPost ID:\n${post.id}\n\nTitle:\n${post.title}\n\nBody:\n${post.body}`;
 }
 
+//fetch all button
 document.getElementById('fetchAllButton').addEventListener('click', function() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
         .then(posts => {
-            const dataDisplay = document.getElementById("dataDisplay");
             dataDisplay.innerText =" "; //clear previous data
-             posts.slice(0, 3).forEach(post => { //only displaying 3 instead of all 100
-                displayPost(post);
-            });
-        })
-        .catch(error => dataDisplay.innerText = "Unable to fetch posts: " + error.message);
+            posts.slice(0, 3).forEach(post => { //only displaying 3 instead of all 100
+            displayPost(post);
+        });
+    })
+    .catch(error => dataDisplay.innerText = "Unable to fetch posts: " + error.message);
 });
