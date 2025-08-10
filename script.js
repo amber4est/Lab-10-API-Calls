@@ -20,7 +20,8 @@ fetchButton.addEventListener('click', function() {
             return response.json();
         })
         .then(post => {
-           displayPost(post);
+            dataDisplay.innerText =" "; //clear previous data
+            displayPost(post);
         })
         .catch(error => console.error('Error fetching data:', error));
 });
@@ -34,6 +35,7 @@ xhrButton.addEventListener('click', function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 const post = JSON.parse(xhr.responseText);
+                dataDisplay.innerText =" "; //clear previous data
                 displayPost(post);
             } else {
                 console.error('Error fetching data:', xhr.statusText);
@@ -61,12 +63,16 @@ postForm.addEventListener("submit", (event) => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(postObject)
     })
-        .then((response) => response.json())
+        .then((response) => {
+            if (!response.ok) throw new Error('Failed to create post');
+            return response.json();
+        })
         .then((post) => {
             postDisplay(post);
             postForm.reset(); //reset post form
         })
-           .catch(error => postData.innerText = "Failed to send post: " + error.message);
+        
+        .catch(error => postData.innerText = "Failed to send post: " + error.message);
 });
 
 //put
@@ -129,7 +135,7 @@ deleteForm.addEventListener("submit", function(event) {
 
 //functions to display the post data
 function displayPost(post) {
-    dataDisplay.innerText = `Title:\n${post.title}\n\nBody:\n${post.body}`;
+    dataDisplay.innerText += `Title:\n${post.title}\n\nBody:\n${post.body}\n\n`; //"+" for the fetch all option
 }
 
 function postDisplay(post) {
@@ -139,3 +145,16 @@ function postDisplay(post) {
 function putDisplay(post) {
     putData.innerText = `Post has been updated!\n\nUser ID:\n${post.userId}\n\nPost ID:\n${post.id}\n\nTitle:\n${post.title}\n\nBody:\n${post.body}`;
 }
+
+document.getElementById('fetchAllButton').addEventListener('click', function() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
+        .then(posts => {
+            const dataDisplay = document.getElementById("dataDisplay");
+            dataDisplay.innerText =" "; //clear previous data
+             posts.slice(0, 3).forEach(post => { //only displaying 3 instead of all 100
+                displayPost(post);
+            });
+        })
+        .catch(error => dataDisplay.innerText = "Unable to fetch posts: " + error.message);
+});

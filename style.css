@@ -24,7 +24,7 @@ header, footer {
     margin:0 auto;
 }
 
-#fetchButton, #xhrButton {
+#fetchButton, #xhrButton, #fetchAllButton {
     background-color: lightblue;
     font-size: 18px;
     padding: 10px;
@@ -35,7 +35,7 @@ header, footer {
     margin: 20px;
 }
 
-#fetchButton:hover, #xhrButton:hover {
+#fetchButton:hover, #xhrButton:hover, #fetchAllButton:hover {
     background-color: white;
     box-shadow: 3px 4px 4px black;
     border: 2px solid black;
