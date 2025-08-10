@@ -9,13 +9,13 @@
 </head>
 <body>
     <header><h1>Lab 10: API Calls in JavaScript</h1></header>
-    
+
     <div id="topButtons">
         <button id="fetchButton">Fetch Data with fetch()</button>
         <button id="xhrButton">Fetch Data with XHR</button>
         <button id="fetchAllButton">Fetch All Posts</button>
     </div>
-    
+
     <div id="dataDisplay"></div><br>
 
     <form id="postForm">
@@ -23,14 +23,14 @@
         <label for="title">Post Title:</label><br>
         <input type="text" id="title" placeholder="Title" required><br><br>
         <label for="body">Post Body:</label><br>
-        <textarea name="body" id="body" rows="4" placeholder="Body"></textarea><br><br>
+        <textarea name="body" id="body" rows="4" placeholder="Body" required></textarea><br><br>
         <button type="submit" id="createPost">Create Post</button>
     </form><br>
     <div id="postDisplay"></div><br>
 
     <form id="putForm">
         <h2>Update Post</h2><br>
-        <label for="id">Post ID to Update:</label><br>
+        <label for="putId">Post ID to Update:</label><br>
         <input type="number" id="putId" placeholder="Post ID" required /><br><br>
         <label for="title">Update Post Title:</label><br>
         <input type="text" id="putTitle" placeholder="New Title" required /><br><br>
@@ -42,7 +42,7 @@
 
     <form id="deleteForm">
         <h2>Delete Post</h2><br>
-        <label for="id">Post ID to Delete:</label><br>
+        <label for="deleteId">Post ID to Delete:</label><br>
         <input type="number" id="deleteId" placeholder="Post ID to Delete" required /><br><br>
         <button type="submit" id="deletePost">Delete Post</button>
     </form><br>

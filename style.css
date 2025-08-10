@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: Arial;
-  background-color: white;
+    font-family: Arial;
+    background-color: white;
 }
 
 header, footer {
@@ -117,4 +117,9 @@ input, textarea {
     width: 50%;
     padding: 10px;
     margin: 5px;
+}
+
+#dataDisplay.error, #postDisplay.error, #putDisplay.error, #deleteDisplay.error {
+    background-color: red;
+    color: white;
 }
